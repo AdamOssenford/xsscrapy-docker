@@ -6,6 +6,6 @@ RUN apk add python2-dev git openssl-dev libxml2-dev libxslt-dev zlib libffi-dev 
     export TERM=vt100 && \
     GCC=g++ && \
     pip install -r requirements.txt
-
-ENTRYPOINT ["/xsscrapy/xsscrapy.py"]
+WORKDIR /xsscrapy
+ENTRYPOINT ["./xsscrapy.py"]
 
